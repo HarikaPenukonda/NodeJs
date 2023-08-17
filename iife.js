@@ -1,11 +1,11 @@
-(function(){
+(function(message){
     const superHero = "Batman"
-    console.log(superHero)
-})();
+    console.log(message,superHero)
+})('Hello');
 
-(function(){
+(function(message){
     const superHero = "Superman"
-    console.log(superHero)
-})();
+    console.log(message,superHero)
+})('Hey');
 
 // Immediately Invoked Function Expression (IIFE) in Node.js
