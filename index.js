@@ -1,11 +1,14 @@
-const SuperHero = require('./super-hero')
-const batman = new SuperHero("Batman")
-console.log(batman.getName())
-batman.setName("Bruce Wayne")
-console.log(batman.getName())
+const add = require('./math')
+console.log(add(2,3))
 
-const superman = new SuperHero("Superman")
-console.log(superman.getName())
+// const SuperHero = require('./super-hero')
+// const batman = new SuperHero("Batman")
+// console.log(batman.getName())
+// batman.setName("Bruce Wayne")
+// console.log(batman.getName())
+
+// const superman = new SuperHero("Superman")
+// console.log(superman.getName())
 
 // const superHero = require('./super-hero') // loaded and cached(remembered)
 // console.log(superHero.getName()); // Batman
