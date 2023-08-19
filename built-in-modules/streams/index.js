@@ -6,9 +6,10 @@ const readableStream = fs.createReadStream("./file1.txt",{
 })
 
 const writableStream = fs.createWriteStream("./file2.txt")
+readableStream.pipe(writableStream)
 
-readableStream.on("data",(chunkOfData)=>{
-    console.log(chunkOfData)
-    writableStream.write(chunkOfData)
-})
+// readableStream.on("data",(chunkOfData)=>{
+//     console.log(chunkOfData)
+//     writableStream.write(chunkOfData)
+// })
 
