@@ -18,3 +18,6 @@ console.log(obj1) // { name: 'Bruce wayne' }
 /*
     when we assign the object literal, the reference was broken, modifying obj2 will not affect obj1
 */
+/*
+    obj1  is module.exports and obj2 is just exports
+*/
