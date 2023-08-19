@@ -1,4 +1,6 @@
 import math from './math-esm.mjs'
 
-console.log(math.add(5,5))
-console.log(math.subract(5,5))
+const {add,subract} = math
+
+console.log(add(5,5))
+console.log(subract(5,5))
