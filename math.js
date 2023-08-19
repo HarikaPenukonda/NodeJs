@@ -6,7 +6,7 @@ const subract = (a,b) => {
     return a - b
 }
 
-module.exports = {add,subract}
+exports = {add,subract} // TypeError: add is not a function
 
 // exports.add  = (a,b) =>{
 //     return a+b
