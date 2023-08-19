@@ -1,5 +1,9 @@
-module.exports = (a,b) =>{
+const add  = (a,b) =>{
     return a+b
 }
 
-//module.exports = add
+
+const subract  = (a,b) =>{
+    return a-b
+} 
+module.exports = {add,subract}
