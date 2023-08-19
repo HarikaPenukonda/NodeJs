@@ -1,9 +1,9 @@
-module.exports.add  = (a,b) =>{
+exports.add  = (a,b) =>{
     return a+b
 }
 
 
-module.exports.subract  = (a,b) =>{
+exports.subract  = (a,b) =>{
     return a-b
 } 
 
