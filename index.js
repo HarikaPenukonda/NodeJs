@@ -1,9 +1,17 @@
-const math = require('./math')
+const data = require('./data.json')
+console.log(data)
+// {
+//     name: 'Bruce Wayne',
+//     address: { street: 'Wayne Manor', city: 'Gotham' }
+//   }
+console.log(data.name)
 
-const{add,subract} = math
+// const math = require('./math')
 
-console.log(add(2,3))
-console.log(subract(5,3))
+// const{add,subract} = math
+
+// console.log(add(2,3))
+// console.log(subract(5,3))
 
 // const SuperHero = require('./super-hero')
 // const batman = new SuperHero("Batman")
