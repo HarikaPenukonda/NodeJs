@@ -1,6 +1,9 @@
 const math = require('./math')
-console.log(math.add(2,3))
-console.log(math.subract(5,3))
+
+const{add,subract} = math
+
+console.log(add(2,3))
+console.log(subract(5,3))
 
 // const SuperHero = require('./super-hero')
 // const batman = new SuperHero("Batman")
