@@ -18,3 +18,13 @@ fs.readFile("/Users/matthewhinthorn/Desktop/NodeProjects/NodeJS/file.txt","utf-8
 })
 
 console.log("third")
+// Overwrite existing content
+fs.writeFileSync("/Users/matthewhinthorn/Desktop/NodeProjects/NodeJS/greet.txt","Hello World")
+
+fs.writeFile("/Users/matthewhinthorn/Desktop/NodeProjects/NodeJS/greet.txt","Hello Harry",(error)=>{
+    if(error){
+        console.log(error)
+    }else{
+        console.log("File written")
+    }
+})
