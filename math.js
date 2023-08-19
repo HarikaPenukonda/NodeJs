@@ -8,6 +8,10 @@ const subract = (a,b) => {
 
 exports = {add,subract} // TypeError: add is not a function
 
+/*
+    from a module Node.js only returns module.exports but not exports object
+*/
+
 // exports.add  = (a,b) =>{
 //     return a+b
 // }
