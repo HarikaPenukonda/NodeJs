@@ -1,17 +1,26 @@
-const superHero = require('./super-hero') // loaded and cached(remembered)
-console.log(superHero.getName()); // Batman
+const SuperHero = require('./super-hero')
+const batman = new SuperHero("Batman")
+console.log(batman.getName())
+batman.setName("Bruce Wayne")
+console.log(batman.getName())
 
-superHero.setName("Harry Potter")
-console.log(superHero.getName()); // HarryPotter
+const superman = new SuperHero("Superman")
+console.log(superman.getName())
 
-const newSuperHero = require('./super-hero') // create another instance
-console.log(newSuperHero.getName()); // HarryPotter
+// const superHero = require('./super-hero') // loaded and cached(remembered)
+// console.log(superHero.getName()); // Batman
+
+// superHero.setName("Harry Potter")
+// console.log(superHero.getName()); // HarryPotter
+
+// const newSuperHero = require('./super-hero') // create another instance
+// console.log(newSuperHero.getName()); // HarryPotter
 
 /*
     we are creating new instance of super hero which should recieve batman as the name
     module caching
     when we require new module, it is loaded and cached(remembered) for subsequent loading
-    
+
 */
 
 
