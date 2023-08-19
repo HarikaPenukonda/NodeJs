@@ -1,9 +1,10 @@
-const add  = (a,b) =>{
+module.exports.add  = (a,b) =>{
     return a+b
 }
 
 
-const subract  = (a,b) =>{
+module.exports.subract  = (a,b) =>{
     return a-b
 } 
-module.exports = {add,subract}
+
+//module.exports = {add,subract}
