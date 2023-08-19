@@ -1,4 +1,3 @@
-const { error } = require("node:console")
 const fs = require("node:fs/promises")
 
 async function readFile(){
