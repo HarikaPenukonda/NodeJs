@@ -4,13 +4,13 @@
 
 //export default add
 
-const add = (a,b) =>{
+export const add = (a,b) =>{
     return a+b
 }
 
-const subract = (a,b) =>{
+export const subract = (a,b) =>{
     return a-b
 }
 
-export default{add,subract}
+//export default{add,subract}
 
