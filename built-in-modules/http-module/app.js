@@ -11,8 +11,10 @@ const fs = require("node:fs")
 
 const server = http.createServer((request,response)=>{
     response.writeHead(200,{"Content-Type" : "text/html"})
-    const html = fs.readFileSync("./index.html","utf-8")
-    response.end(html)
+    fs.createReadStream("./index.html").pipe(response)
+    // const html = fs.readFileSync("./index.html","utf-8")
+    // response.end(html)
+
 })
 
 // inform server to listen to any incoming requests
