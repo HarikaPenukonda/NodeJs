@@ -12,6 +12,18 @@ const getText = (path) =>{
     })
 }
 
-getText("./file.txt")
-.then((result)=>console.log(result))
-.catch(err => console.log(err))
+// getText("./file.txt")
+// .then((result)=>console.log(result))
+// .catch(err => console.log(err))
+
+const start = async() =>{
+    try{
+        const first = await getText("./file.txt")
+        console.log(first)
+    }catch(err){
+        console.log(err)
+    }
+    
+}
+
+start()
