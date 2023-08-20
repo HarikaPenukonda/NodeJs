@@ -15,6 +15,7 @@ const superHero = {
 
 const server = http.createServer((request,response)=>{
     response.writeHead(200,{"Content-Type" : "application/json"})
+    // sending objects as JSON response
     response.end(JSON.stringify(superHero))
 })
 
