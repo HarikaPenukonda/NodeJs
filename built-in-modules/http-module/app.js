@@ -1,5 +1,6 @@
 // import the http module
 const http = require("node:http")
+const fs = require("node:fs")
 
 // invoke the create sever method on the module, which accepts callback function as an argument
 // the callback function has 2 arguments request and response
@@ -10,7 +11,8 @@ const http = require("node:http")
 
 const server = http.createServer((request,response)=>{
     response.writeHead(200,{"Content-Type" : "text/html"})
-    response.end("<h1>Hello world</h1>")
+    const html = fs.readFileSync("./index.html","utf-8")
+    response.end(html)
 })
 
 // inform server to listen to any incoming requests
