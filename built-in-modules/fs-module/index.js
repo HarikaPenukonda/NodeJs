@@ -21,10 +21,14 @@ console.log("third")
 // Overwrite existing content
 fs.writeFileSync("/Users/matthewhinthorn/Desktop/NodeProjects/NodeJS/greet.txt","Hello World")
 
-fs.writeFile("/Users/matthewhinthorn/Desktop/NodeProjects/NodeJS/greet.txt"," Happy NodeJS Practice.. All the best",{flag:"a"},(error)=>{
-    if(error){
-        console.log(error)
-    }else{
-        console.log("File written")
-    }
+fs.writeFile(
+    "/Users/matthewhinthorn/Desktop/NodeProjects/NodeJS/greet.txt",
+    " Happy NodeJS Practice.. All the best",
+    {flag:"a"},
+    (error)=>{
+        if(error){
+            console.log(error)
+        }else{
+            console.log("File written")
+        }
 })
