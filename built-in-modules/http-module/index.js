@@ -1,8 +1,10 @@
-// 1. import the http module
+// import the http module
 const http = require("node:http")
 
 // invoke the create sever method on the module, which accepts callback function as an argument
 // the callback function has 2 arguments request and response
+// request - gives us information about the incomming requests
+// response - send back a response to client
 // http module also extends eventemitter class, the callback function specified is a request listener
 // whenever the request reaches the server this callback function is executed
 
