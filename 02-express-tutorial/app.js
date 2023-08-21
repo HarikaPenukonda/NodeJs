@@ -67,4 +67,9 @@ server.listen(3000,()=>console.log("Server listening at port 3000..."))
 
     so manually we need to request all the files and assign to some variable and setup these paths
 
+    From the above code we can see that we need to define each and every resource, in real-time which is 
+    a difficult and tire-some thing to do.
+
+    To make our life easier we use Express Framework
+
 */
