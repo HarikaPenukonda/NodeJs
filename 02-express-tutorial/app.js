@@ -1,18 +1,9 @@
 const express = require('express')
-const path = require('path')
+const {products} = require('./data')
 const app = express()
 
-//setup static and middleware
-app.use(express.static('./public'))
-
-// app.get('/',(req,res)=>{
-//     res.sendFile(path.join(__dirname,'./navbar-app/index.html'))
-// adding to static access
-//  SSR
-// })
-
-app.all('*',(req,res)=>{
-    res.status(404).send('resource not found')
+app.get('/',(req,res)=>{
+    res.json(products)
 })
 
-app.listen(3000,()=>console.log("Server starting at port 3000..."))
+app.listen(3000,()=>console.log("server is listening to port 3000..."))
