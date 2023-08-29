@@ -8,7 +8,11 @@ app.get('/',(req,res)=>{
 })
 
 app.get('/api/products',(req,res)=>{
-    res.json(products)
+    const newProducts = products.map(data=>{
+        const {id,name,price} = data
+        return {id,name,price}
+    })
+    res.json(newProducts)
 })
 
 app.listen(3001,()=>console.log("server is listening to port 3001..."))
