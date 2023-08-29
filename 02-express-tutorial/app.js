@@ -15,11 +15,17 @@ app.get('/api/products',(req,res)=>{
     res.json(newProducts)
 })
 app.get('/api/products/:productID',(req,res)=>{
-    //console.log(req)
-    // console.log(req.params) // { productID: '1' }
     const {productID} = req.params
     const singleProduct = products.find(data => data.id === Number(productID))
+    if(!singleProduct){
+         res.status(404).send('Product id does not exist')
+    }
     res.json(singleProduct)
+})
+
+app.get('/api/products/:productID/reviews/:reviewID',(req,res)=>{
+    console.log(req.params) // { productID: '1', reviewID: 'abc' }
+    res.send('Hello World')
 })
 
 
