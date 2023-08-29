@@ -14,8 +14,11 @@ app.get('/api/products',(req,res)=>{
     })
     res.json(newProducts)
 })
-app.get('/api/products/1',(req,res)=>{
-    const singleProduct = products.find(data => data.id === 1)
+app.get('/api/products/:productID',(req,res)=>{
+    //console.log(req)
+    // console.log(req.params) // { productID: '1' }
+    const {productID} = req.params
+    const singleProduct = products.find(data => data.id === Number(productID))
     res.json(singleProduct)
 })
 
