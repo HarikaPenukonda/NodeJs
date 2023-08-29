@@ -28,6 +28,19 @@ app.get('/api/products/:productID/reviews/:reviewID',(req,res)=>{
     res.send('Hello World')
 })
 
+app.get('/api/v1/query',(req,res)=>{
+    //console.log(req.query) // http://localhost:3001/api/v1/query?name=john&id=4, { name: 'john', id: '4' }
+    const{search,limit} = req.query
+    let sortedProducts = [...products]
+    if(search){
+        sortedProducts = sortedProducts.filter(products=>products.name.startsWith(search))
+    }
+    if(limit){
+        sortedProducts = sortedProducts.slice(0,Number(limit))
+    }
+    res.status(200).json(sortedProducts)
+    //res.send('Hello World')
+})
 
 
 app.listen(3001,()=>console.log("server is listening to port 3001..."))
