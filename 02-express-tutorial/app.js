@@ -14,5 +14,11 @@ app.get('/api/products',(req,res)=>{
     })
     res.json(newProducts)
 })
+app.get('/api/products/1',(req,res)=>{
+    const singleProduct = products.find(data => data.id === 1)
+    res.json(singleProduct)
+})
+
+
 
 app.listen(3001,()=>console.log("server is listening to port 3001..."))
