@@ -3,7 +3,7 @@ const app = express()
 const logger = require('./logger')
 
 // req => middleware => res
-app.use(logger)
+app.use('/api',logger)
 
 app.get('/',(req,res)=>{
     res.send('Home')
